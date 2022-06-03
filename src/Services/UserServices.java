@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Repositories;
- 
-import Data.AppDbContext;
+package Services;
+
+import Utils.AppDbContext;
 import Entities.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,19 +13,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import Enums.UserType;
-import java.sql.Date;
 
-public class UserRepository {
+public class UserServices 
+{
     Connection Connection;  
     
     // <editor-fold defaultstate="collapsed" desc="Init Creation Instance -> Singleton">
-    private UserRepository() 
+    private UserServices() 
     {
         Connection = AppDbContext.GetInstance().GetDbConnection(); 
     }
-    private static UserRepository instance = new UserRepository(); 
+    private static UserServices instance = new UserServices(); 
     
-    public static UserRepository GetInstance() 
+    public static UserServices GetInstance() 
     {
         return instance; 
     }
@@ -211,5 +211,4 @@ public class UserRepository {
     // </editor-fold>
     
     // </editor-fold>
-    
 }

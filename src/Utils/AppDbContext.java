@@ -3,17 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Data;
+package Utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import Shared.DbConfig; 
+import Utils.DbConfig; 
 
-/**
- *
- * @author Dhiaeddsn
- */
 public class AppDbContext {
     
     Connection Connection; 
